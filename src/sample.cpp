@@ -8,7 +8,7 @@
 #include <istream>
 #include <iterator>
 #include <unordered_map>
-#include "PropertyParser.h"
+#include "property.h"
 
 using namespace property;
 
