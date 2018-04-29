@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	std::istream& is = ss;
 
-	PropertyParser properties(is);
+	PropertyParser properties(is, {{"option4", "hello"}});
 
 	for (auto it = std::cbegin(properties); it != std::cend(properties); it++)
 	{
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		std::cout << kv.first << " = " << kv.second << "\n";
 	}
 
-	std::cout << properties.valueOf("option3") << "\n";
+	std::cout << properties.valueOf("option4") << "\n";
 
 	return 0;
 }
