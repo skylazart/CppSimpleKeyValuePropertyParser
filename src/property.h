@@ -135,7 +135,7 @@ namespace property
 		auto idxFirstSpace = s.find_first_of(' ');
 		std::string key = s.substr(0, std::min(idx, idxFirstSpace));
 
-		idx = s.find_first_not_of('= ', idx + 1);
+		idx = s.find_first_not_of("= ", idx + 1);
 		if (idx == s.npos)
 		{
 			// Error
