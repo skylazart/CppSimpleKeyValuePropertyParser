@@ -25,6 +25,11 @@ namespace property
 			parseInputStream(is);
 		}
 
+		PropertyParser(std::istream& is, std::unordered_map<std::string, std::string> KV) : keys {KV}
+		{
+			parseInputStream(is);
+		}
+		
 	public:
 		const std::unordered_map<std::string, std::string>& getMap() const
 		{
